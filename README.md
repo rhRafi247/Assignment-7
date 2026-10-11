@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 বাজার দর (BazarDor) — নিত্যপণ্যের নির্ভরযোগ্য বাজারদর এক নজরে
 
-## Getting Started
+**বাজার দর (BazarDor)** হলো একটি আধুনিক, দ্রুতগতির এবং রেসপনসিভ ওয়েব অ্যাপ্লিকেশন যা বাংলাদেশের বিভিন্ন বাজারের নিত্যপ্রয়োজনীয় পণ্যের (চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম ও মসলা) দৈনন্দিন দাম, দামের পরিবর্তন, বাজারভিত্তিক গড়, সর্বনিম্ন ও সর্বাধিক মূল্য প্রদর্শন করে।
 
-First, run the development server:
+---
 
+## 🚀 লাইভ ডেমো ও প্রজেক্ট তথ্য
+
+- **প্রজেক্টের নাম:** বাজার দর (BazarDor)
+- **উদ্যোগ:** প্রতিদিনের বাজারদরের হালনাগাদ তথ্য সাধারণ মানুষের কাছে পৌঁছে দেওয়া।
+
+---
+
+## 🛠️ ব্যবহৃত প্রযুক্তিসমূহ (Technologies Used)
+
+- **UI Framework:** [Next.js](https://nextjs.org/) (App Router, Server Components & Client Components)
+- **Library:** [React 19](https://react.dev/)
+- **Styling & Design System:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Bengali Typography:** Google Fonts — Hind Siliguri
+- **Authentication:** [BetterAuth](https://better-auth.com/) (ইমেইল/পাসওয়ার্ড, সোশ্যাল লগইন সমর্থন, সেশন হ্যান্ডলিং)
+- **Database:** SQLite (LibSQL / better-sqlite3)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Toast Notifications:** [react-hot-toast](https://react-hot-toast.com/)
+
+---
+
+## ✨ প্রধান ৫টি বৈশিষ্ট্য (Key Features)
+
+1. **রিয়েল-টাইম প্রাইস টিকার (Price Ticker Marquee):**
+   - প্রতি মুহূর্তের বাজারদর পরিবর্তনের একটি নিরবচ্ছিন্ন অ্যানিমেটেড স্ট্রিপ যা পণ্যের ইমোজি, নাম, আজকের দাম এবং মূল্য বৃদ্ধির (▲) বা কমার (▼) শতকরা হার নির্দেশ করে।
+
+2. **স্বয়ংক্রিয় বাজার পরিবর্তন বিশ্লেষণ (Top Risers & Fallers):**
+   - **“আজ দাম বেড়েছে ▲”** সেকশনে শীর্ষ ৬টি মূল্যবৃদ্ধির পণ্য এবং **“আজ দাম কমেছে ▼”** সেকশনে শীর্ষ ৬টি মূল্যহ্রাসের পণ্য স্বয়ংক্রিয়ভাবে ফিল্টার ও সাজিয়ে প্রদর্শন।
+
+3. **বিভাগভিত্তিক পণ্য ও অ্যাডভান্সড সর্টিং (Challenge C1):**
+   - চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম-দুধ ও মসলা ক্যাটাগরির জন্য ডেডিকেটেড পেজ।
+   - বাংলা সংখ্যা সমর্থিত সঠিক নিউমেরিক সর্টিং: **ডিফল্ট**, **দাম: কম থেকে বেশি**, এবং **দাম: বেশি থেকে কম**।
+
+4. **সুরক্ষিত পণ্য বিবরণ ও বাজারভিত্তিক তুলনা (Protected Product Details):**
+   - প্রতিটি পণ্যের বিস্তারিত পাতা সুরক্ষাবেষ্টিত (লগইন ছাড়া প্রবেশ করলে নোটিফিকেশনসহ সাইন-ইন পেজে রিডাইরেক্ট করে)।
+   - সারা দেশের বিভিন্ন বাজারের (যেমন কারওয়ান বাজার, সদর বাজার, আমতলী বাজার ইত্যাদি) সর্বনিম্ন, সর্বাধিক ও গড় মূল্যের সমন্বিত টেবিল।
+
+5. **ব্যবহারকারী তথ্য আপডেট ফিচার (Challenge C3):**
+   - 'আমার প্রোফাইল' পেজ এবং 'তথ্য আপডেট করুন' পেজ।
+   - BetterAuth-এর অফিসিয়াল ইউজার অ্যাকাউন্টস মেথড ব্যবহার করে সহজেই ব্যবহারকারীর নাম আপডেট করার সুবিধা।
+
+---
+
+## 💻 যেভাবে স্থানীয়ভাবে চালাবেন (Getting Started Locally)
+
+### ১. ক্লোন ও ডিপেন্ডেন্সি ইনস্টলেশন
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd assignment-7
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### ২. এনভায়রনমেন্ট ভেরিয়েবল সেটআপ
+প্রজেক্টের রুট ডিরেক্টরিতে `.env.local` ফাইল তৈরি করুন:
+```env
+BETTER_AUTH_SECRET=bazardor_secure_secret_key_2026_xyz!
+BETTER_AUTH_URL=http://localhost:3000
+NEXT_PUBLIC_BETTER_AUTH_URL=http://localhost:3000
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### ৩. ডেভেলপমেন্ট সার্ভার চালু করুন
+```bash
+npm run dev
+```
+ব্রাউজারে [http://localhost:3000](http://localhost:3000) ওপেন করুন।
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ৪. প্রজেক্ট বিল্ড করা
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 ফোল্ডার স্ট্রাকচার (Folder Structure)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+assignment-7/
+├── public/                 # লোগো ও ব্যানার চিত্রসমূহ
+├── src/
+│   ├── app/
+│   │   ├── api/auth/       # BetterAuth API হ্যান্ডলার
+│   │   ├── category/       # ক্যাটাগরি পেজ ও সর্টিং
+│   │   ├── product/        # সুরক্ষাবেষ্টিত পণ্য বিবরণ পেজ
+│   │   ├── profile/        # প্রোফাইল ও তথ্য আপডেট পেজ (C3)
+│   │   ├── signin/         # সাইন ইন পেজ ও ডেমো লগইন
+│   │   ├── signup/         # সাইন আপ পেজ
+│   │   ├── not-found.js    # কাস্টম ৪০৪ পেজ
+│   │   ├── layout.js       # রুট লেআউট (Navbar, Marquee, Footer, Toaster)
+│   │   └── page.js         # হোম পেজ (Hero, Risers, Fallers, All Products)
+│   ├── components/         # রিইউজেবল কম্পোনেন্টস (Navbar, Hero, ProductCard, ইত্যাদি)
+│   └── lib/                # API ক্লায়েন্ট, ইউটিলিটি ও Auth কনফিগ
+└── README.md
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 লাইসেন্স
+এই প্রজেক্টটি শিক্ষামূলক উদ্দেশ্যে উন্মুক্ত লাইসেন্সের আওতায় তৈরি।
