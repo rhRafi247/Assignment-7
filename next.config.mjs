@@ -4,8 +4,8 @@ const nextConfig = {
   experimental: {
     agentFeedback: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
+  cacheComponents: false,
+  partialPrefetching: false,
   reactCompiler: true,
   turbopack: {
     rules: {
@@ -14,6 +14,15 @@ const nextConfig = {
         as: "*.css",
       },
     },
+  },
+  async redirects() {
+    return [
+      {
+        source: "/categories/:slug",
+        destination: "/category/:slug",
+        permanent: true,
+      },
+    ];
   },
 };
 
